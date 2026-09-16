@@ -1,0 +1,5 @@
+# Author: Mourad.Soltani
+-r requirements.txt
+pytest==8.3.2
+pytest-mock==3.14.0
+requests-mock==1.12.1

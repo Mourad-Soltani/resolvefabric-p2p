@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "resolvefabric-p2p"
+version = "3.0.0"
+description = "ResolveFabric P2P Exception Autonomy Platform - Author: Mourad.Soltani - $5M-$10M Asset Edition"
+authors = [{name="Mourad.Soltani"}]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "Flask==3.0.3",
+    "gunicorn==22.0.0",
+    "requests==2.32.3",
+    "python-dotenv==1.0.1"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+[project.urls]
+Author = "https://github.com/MouradSoltani"

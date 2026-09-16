@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResolveFabric P2P - Mourad.Soltani</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Author: Mourad.Soltani -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ResolveFabric P2P</h1>
+            <p class="subtitle">Exception Autonomy Platform — Author: Mourad.Soltani</p>
+            <div class="badge">Pre-Revenue SaaS / $5–10M Asset Edition v3.0</div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>System Health</h2>
+            <div id="healthStatus">Loading...</div>
+            <button id="refreshHealth">Refresh Health</button>
+        </section>
+
+        <section class="card">
+            <h2>P2P Exception Analyzer</h2>
+            <p class="muted">Deterministic core + Live AI advisory (AI never has final word — see MOAT.md) — Mourad.Soltani</p>
+            <form id="exceptionForm">
+                <div class="grid">
+                    <label>PO Number <input type="text" id="po_number" value="PO-1001" required></label>
+                    <label>PO Amount <input type="number" id="po_amount" value="50000" step="0.01" required></label>
+                    <label>Invoice Number <input type="text" id="invoice_number" value="INV-9001" required></label>
+                    <label>Invoice Amount <input type="number" id="invoice_amount" value="52000" step="0.01" required></label>
+                    <label>Vendor ID <input type="text" id="vendor_id" value="VEND-001" required></label>
+                    <label>Vendor Name <input type="text" id="vendor_name" value="Acme Corp" required></label>
+                    <label>PO Status 
+                        <select id="po_status">
+                            <option value="OPEN" selected>OPEN</option>
+                            <option value="CLOSED">CLOSED</option>
+                            <option value="EXPIRED">EXPIRED</option>
+                        </select>
+                    </label>
+                    <label>Currency PO <input type="text" id="currency_po" value="USD"></label>
+                    <label>Currency Invoice <input type="text" id="currency_invoice" value="USD"></label>
+                    <label>Approval Limit <input type="number" id="approval_limit" value="100000"></label>
+                    <label>GR Received <select id="gr_received"><option value="true" selected>true</option><option value="false">false</option></select></label>
+                    <label>Is Duplicate Check <select id="is_duplicate"><option value="false" selected>false</option><option value="true">true</option></select></label>
+                </div>
+                <div class="actions">
+                    <button type="submit">Analyze Exception (Deterministic + AI)</button>
+                    <button type="button" id="btnDuplicate">Test Duplicate Invoice (Critical)</button>
+                    <button type="button" id="btnCurrency">Test Currency Mismatch</button>
+                    <button type="button" id="btnNoExc">Test No Exception</button>
+                </div>
+            </form>
+            <div id="result" class="result"></div>
+        </section>
+
+        <section class="card">
+            <h2>Vendor Verification Ledger (Moat)</h2>
+            <div class="grid">
+                <label>Vendor ID <input type="text" id="v_vendor_id" value="VEND-001"></label>
+                <label>Vendor Name <input type="text" id="v_vendor_name" value="Acme Corp"></label>
+            </div>
+            <button id="btnVerify">Verify Vendor</button>
+            <button id="btnHealth">Vendor Health</button>
+            <button id="btnRot">Detect Data Rot (18mo)</button>
+            <div id="vendorResult" class="result"></div>
+        </section>
+
+        <section class="card">
+            <h2>ROI Simulator</h2>
+            <p>Simulate batch processing to show auto-resolve rate — enterprise ACV justification</p>
+            <button id="btnROI">Run ROI Simulation (10 docs)</button>
+            <div id="roiResult" class="result"></div>
+        </section>
+
+        <section class="card muted">
+            <h3>Architecture Note</h3>
+            <p>Deterministic Engine (core_engine.py) → AI Advisory (ai_layer.py) → Decision (engine final) → ERP Post (integration.py) → Ledger (data_pipeline.py). Signature: Mourad.Soltani. AI never has final word.</p>
+            <p>ACV Band: $400K–$1.2M | Buyer: PE-backed roll-ups, MSP platforms, BPOs | Moat: proprietary vendor normalization + verification ledger + multi-party workflow</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Mourad.Soltani — ResolveFabric P2P — v3.0 — $5M–$10M Asset Edition | All JSON responses include signature Mourad.Soltani</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

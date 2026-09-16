@@ -1,0 +1,42 @@
+# Author: Mourad.Soltani
+version: '3.8'
+services:
+  app:
+    build: 
+      context: ..
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8080
+      - FLASK_ENV=production
+      - AI_REQUIRED=false
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - SAP_MOCK_ENABLED=true
+      - NETSUITE_MOCK_ENABLED=true
+      - MAX_CONTENT_LENGTH=5242880
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8080/health', timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    labels:
+      author: "Mourad.Soltani"
+      signature: "Mourad.Soltani"
+    restart: unless-stopped
+
+  # Optional Postgres for enterprise deployments - commented for local
+  # db:
+  #   image: postgres:15-alpine
+  #   environment:
+  #     POSTGRES_DB: resolvefabric
+  #     POSTGRES_USER: resolvefabric
+  #     POSTGRES_PASSWORD: resolvefabric
+  #   volumes:
+  #     - pgdata:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+
+# volumes:
+#   pgdata:
