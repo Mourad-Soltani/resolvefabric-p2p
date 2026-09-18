@@ -5,12 +5,24 @@
 
 **Repository:** https://github.com/Mourad-Soltani/resolvefabric-p2p
 
-## Current Status (as of 2026-09-16)
+## Current Status (as of 2026-09-18)
 - **Stage:** Working vertical slice / prototype. Zero revenue, zero customers, zero LOIs or paid pilots.
 - **Code:** Production-shaped Python/Flask backend + pure JS frontend, ~85 tests, Docker + Terraform stubs.
 - **Live AI path:** Structured for real OpenAI-compatible calls (timeout/retry/cost guard); falls back to mock when no API key.
 - **ERP connectors:** Real-shaped (SAP S/4HANA + NetSuite) but mocked in tests and default runtime.
-- **Realistic market positioning:** Pre-revenue code + diligence asset. Not a $5M–$10M acquisition candidate in its current state. Suitable as a starting point for a founder, small team, or strategic prototype evaluation.
+- **Realistic market positioning:** Pre-revenue code + diligence asset. Suitable as a starting point for a founder, small team, or strategic prototype evaluation.
+
+## Current Valuation (as-is, September 2026)
+Based on public marketplace data for pre-revenue SaaS/code assets and strategic M&A comps in AP/P2P automation:
+
+| Scenario | Estimated range | Notes |
+|----------|-----------------|-------|
+| Open marketplace / indie buyer | $20k – $80k | Working product, no users/revenue |
+| Strategic buyer (PE roll-up, MSP, BPO, ERP) evaluating prototype | $100k – $300k | Time-saved on architecture + diligence pack |
+| Acqui-hire / team + IP (if author joins) | $500k – $2M | Requires team transfer; not pure asset sale |
+| Prior $5M–$10M claim | Not supported | Requires revenue, LOIs, paid pilots, or defended unique IP |
+
+**Bottom line:** Fair as-is value is in the **low-to-mid six figures at the optimistic end** (roughly $50k–$300k), and lower on pure code-sale channels. The original $5M–$10M band is not supported by current market facts for a zero-revenue prototype.
 
 Every source header, JSON response, and diligence document is signed **Mourad.Soltani**. Verify via `/health` → `signature`.
 
@@ -124,4 +136,4 @@ MIT License — Copyright (c) 2026 Mourad.Soltani
 
 ---
 
-Mourad.Soltani · ResolveFabric P2P v3.0 · Pre-revenue working vertical slice · 2026
+Mourad.Soltani · ResolveFabric P2P v3.0 · Pre-revenue working vertical slice · as-is valuation added 2026-09-18
