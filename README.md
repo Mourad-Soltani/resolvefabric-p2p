@@ -5,6 +5,17 @@
 
 **Repository:** https://github.com/Mourad-Soltani/resolvefabric-p2p
 
+## Summary
+ResolveFabric P2P is a **pre-revenue working vertical slice** of a Purchase-to-Pay exception-handling platform.
+
+- **What it does:** Classifies and routes P2P invoice exceptions (price/qty mismatch, missing GR, duplicates, vendor master, tax/currency, approvals, etc.) using a deterministic engine that always has the final word, with an optional live AI advisory layer.
+- **Stack:** Python 3.12 / Flask, pure JS frontend, ~85 tests, Docker + Terraform stubs, MIT license.
+- **Integrations:** SAP S/4HANA and NetSuite connectors (real-shaped, mocked by default).
+- **Extras:** Vendor normalization, verification ledger, data-rot detection, exception fingerprinting.
+- **Status:** No revenue, no customers, no LOIs. Suitable as a starting codebase or strategic prototype — not a live product.
+- **Related asset:** A broader private sibling (`payflow-exceptions`) exists with deeper connectors, audit trail, and pilot pack. For sale purposes, treat one P2P asset only to avoid overlap.
+- **As-is value (Sep 2026):** Marketplace ~$20k–$80k; strategic prototype interest ~$100k–$300k; higher only with team transfer or real traction.
+
 ## Current Status (as of 2026-09-18)
 - **Stage:** Working vertical slice / prototype. Zero revenue, zero customers, zero LOIs or paid pilots.
 - **Code:** Production-shaped Python/Flask backend + pure JS frontend, ~85 tests, Docker + Terraform stubs.
